@@ -46,7 +46,7 @@ services:
       - DB_NAME=${DB_NAME}
       - SA_PASSWORD=${DB_PASSWORD}
     volumes:
-      - tradenetworks-data:/var/opt/mssql
+      - ./volumes/database/data:/var/opt/mssql
       - ./volumes/database/backups:/backups
     ports:
       - "1433:1433"
